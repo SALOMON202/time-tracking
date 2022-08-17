@@ -1,0 +1,331 @@
+//variables
+
+
+$width-1: 375px;
+$width-2: 1440px;
+$Blue: hsl(246, 80%, 60%);
+$Lightred: hsl(15, 100%, 70%);//(work)
+$Soft-blue : hsl(195, 74%, 62%);//(play):
+$Light-red:  hsl(348, 100%, 68%); //(study):
+$Lime-green: hsl(145, 58%, 55%);//(exercise):
+$Violet:  hsl(264, 64%, 52%);//(social):
+$Soft-orange : hsl(43, 84%, 65%);//self care)
+$Very-dark-blue: hsl(226, 43%, 10%);
+$Dark-blue: #1c1f4a;
+$Desaturated-blue: #6f76c8;
+$Pale-Blue: hsl(236, 100%, 87%);
+$Font-size: 18px ;//(card titles e.g. Work, Play)
+
+$border-radius: 15px;
+
+
+$Weights: 300, 400, 500;
+
+
+//styling
+*{
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'Rubik', sans-serif;
+
+
+}
+
+content{
+  max-width: 375px;
+}
+
+.container {
+  width:$width-1;
+  display: grid;
+  margin-inline: auto;
+  background-color: $Very-dark-blue;
+}
+
+.data{
+height:6.5rem;
+border-radius: 10px;
+background-color: $Dark-blue;
+}
+
+.box{
+  margin-inline: 22% 22%;
+  width: 70%;
+  max-width: 210px;
+  height: 8rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-radius: $border-radius;
+}
+
+.person{
+  margin-top: 3rem;
+  background-color: $Dark-blue;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+
+.self-care{
+  margin-bottom: 3rem;
+}
+
+.days{
+  height: 5rem;
+  width:100%;
+  border-radius: $border-radius;
+  background-color: $Blue;
+  display: flex;
+  
+}
+
+.element{
+  width:375px;
+  margin: 0 auto
+
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+svg{
+  overflow: hidden;
+}
+.work{
+  background-color: $Lightred;
+}
+.play{
+  background-color: $Soft-blue;
+}
+.study{
+  background-color: $Light-red;
+}
+.exercise{
+  background-color: $Lime-green;
+}
+.social{
+  background-color: $Violet ;
+}
+.self-care{
+  background-color: $Soft-orange;
+}
+.text{
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  width:100%;
+  padding-inline-start: 0;
+  padding-inline-end: 10px;
+}
+li{
+  display: inline-block;
+  width:inherit;
+  color:$Pale-Blue;
+
+  text-align: center;
+  
+  
+ }
+ li:hover{
+ color:white;
+ cursor: pointer;
+
+ }
+
+.jeremy-img{
+  height:70%;
+  position: relative;
+  left:10%;
+  top:15%;
+  ;
+}
+img{
+  max-width: 60px;
+  max-height: 60px;
+  border: 3px solid white;
+  border-radius: 100%;   
+}
+.user{
+position: relative;
+left:13%;
+top:28%;
+font-size: small
+;
+
+}
+.user p{
+  color:lighten($color: #6f76c8, $amount: 20%)
+}
+.user h3{
+  color:white;
+  font-weight: 100 ;
+
+}
+.data-text{
+position: relative;
+left:20px;
+top:25px;
+color: white;
+}
+.data-text p{
+  margin-top: 5px;
+  font-size: x-large;
+}
+.svg-n-other-datas {
+position: relative;
+top:-30%;
+right: 20px;
+text-align: right;
+overflow: hidden;
+
+}
+.svg-n-other-datas p{
+  color:$Pale-Blue;
+  position: relative;
+  font-size: x-small;
+  padding-top: 10px;
+  margin-top: 8px;
+
+}
+.data:active{
+  background-color: lighten($color: $Dark-blue, $amount: 10%);
+  cursor: pointer;
+}
+
+.svg:hover{
+  cursor:pointer;
+  filter: brightness(100);
+}
+
+@media screen and (min-width : 1020px) {
+
+
+.svg-n-other-datas {
+overflow: visible;
+top:-40%
+}
+.svg-n-other-datas p{
+  top:80px;
+
+width: 200px;
+text-align: left;
+padding-left:40px
+}
+#dataTextWork {
+font-size: 45px;
+}
+#dataTextPlay {
+font-size: 45px;
+}
+#dataTextStudy {
+font-size: 45px;
+}
+#dataTextExercise {
+font-size: 45px;
+}
+#dataTextSocial {
+font-size: 45px;
+}
+#dataTextSelfCare {
+font-size: 45px;
+}
+
+.container{
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap:1rem; 
+  min-height:calc(400px + 1rem) ;
+  min-width: calc(800px + 3rem);
+
+}
+.exercise{
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+.person{
+  grid-row-start:1 ;
+  grid-row-end: 3;
+  //margin-bottom: -1rem;
+  // min-width: 262px;
+  min-height: calc(400px + 1rem);
+  // margin-top: 1rem;
+  ;
+
+}
+.box{
+// min-width: 20vw;
+width: 200px;
+   height: 200px;
+   margin:0;
+   
+}
+.data{
+
+top:5px;
+height: 180px;
+
+}
+.element{
+height: 800px;
+width: 1200px;
+background-color: $Very-dark-blue;
+// margin-top: 15vh;
+// margin-left: auto;
+// margin-right: auto;
+margin:15vh auto;
+display: flex;
+place-content: center;
+
+align-items: center;
+
+
+
+}
+.days{
+  height: 17rem;
+  flex-direction: column;
+}
+.user p{
+  font-weight: bolder;
+  color:lighten($color: #6f76c8, $amount: 20%)
+}
+.user h3{
+  font-size: xx-large;
+}
+.text{
+
+flex-direction: column;
+gap:15%;
+justify-content:flex-start ;
+height: calc(400px - 16rem );
+
+
+}
+.jeremy-img{
+  top:1.5rem;
+}
+li{
+  text-align: left;
+  padding-left: 2rem;
+
+  
+}
+#daily{
+  padding-top: 1.5rem;
+}
+
+.data-text{
+left:15px
+}
+.dataText{
+  padding-top: 1rem;
+  font-size: 20px;
+}
+
+}
+footer{
+  color:azure;
+  text-align: center;
+}
